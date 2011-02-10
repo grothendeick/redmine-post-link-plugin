@@ -54,7 +54,7 @@ class PostlinkController < ApplicationController
     @issue = Issue.new
     @issue.subject = params[:subject]
     @issue.description = params[:description]
-    @issue.project_id = Project.find_by_identifier(params[:project_id])
+    @issue.project = Project.find_by_identifier(params[:project_id])
     @issue.assigned_to_id = User.find_by_mail(params[:email]).id
     @issue.start_date =Time.now.localtime.strftime("%Y-%m-%d")
 

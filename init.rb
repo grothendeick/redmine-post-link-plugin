@@ -7,6 +7,6 @@ Redmine::Plugin.register :redmine_postlink_plugin do
   version '0.9.0'
 
   project_module :issues_through_get do
-    permission :postlink, {:postlink => :new }, :require => :member
+    permission :postlink, {:postlink => [:new]}, :require => :member
   end
 end
